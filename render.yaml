@@ -1,0 +1,21 @@
+# Exported from Render on 2026-08-04T16:56:46Z
+version: "1"
+services:
+- type: web
+  name: QueueLess-backend-5
+  runtime: node
+  repo: https://github.com/StudentX-69/QueueLess-backend
+  plan: free
+  envVars:
+  - key: PORT
+    sync: false
+  - key: CLIENT_URL
+    sync: false
+  - key: JWT_SECRET
+    sync: false
+  - key: MONGO_URI
+    sync: false
+  region: oregon
+  buildCommand: npm install; npm run build
+  startCommand: npm run start
+  autoDeployTrigger: commit
