@@ -13,7 +13,7 @@ async function bootstrap() {
   const server = http.createServer(app);
   const io = new Server(server, {
     cors: {
-      origin: process.env.CLIENT_URL || 'https://studentx-69.github.io/QueueLess-',
+      origin: process.env.CLIENT_URL || 'https://studentx-69.github.io',
       methods: ['GET', 'POST'],
       credentials: true,
     },

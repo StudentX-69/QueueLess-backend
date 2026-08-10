@@ -16,7 +16,7 @@ const noopIo = {
 app.set('io', noopIo);
 
 app.use(helmet());
-app.use(cors({ origin: process.env.CLIENT_URL || 'https://studentx-69.github.io/QueueLess-' }));
+app.use(cors({ origin: process.env.CLIENT_URL || 'https://studentx-69.github.io',credentials: true }));
 app.use(express.json());
 app.use(morgan('dev'));
 
