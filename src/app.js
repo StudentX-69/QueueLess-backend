@@ -6,6 +6,7 @@ import authRoutes from './routes/authRoutes.js';
 import businessRoutes from './routes/businessRoutes.js';
 import queueRoutes from './routes/queueRoutes.js';
 import { errorHandler, notFound } from './middleware/errorHandler.js';
+import { getCorsOptions } from './utils/cors.js';
 
 const app = express();
 const noopIo = {
@@ -16,7 +17,7 @@ const noopIo = {
 app.set('io', noopIo);
 
 app.use(helmet());
-app.use(cors({ origin: process.env.CLIENT_URL || 'https://studentx-69.github.io',credentials: true }));
+app.use(cors(getCorsOptions()));
 app.use(express.json());
 app.use(morgan('dev'));
 
