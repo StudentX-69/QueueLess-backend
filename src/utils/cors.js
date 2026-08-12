@@ -1,5 +1,5 @@
 function parseAllowedOrigins() {
-  return (process.env.CLIENT_URL || 'https://studentx-69.github.io')
+  return (process.env.CLIENT_URL || 'https://studentx-69.github.io','http://localhost:5173')
     .split(',')
     .map((origin) => origin.trim())
     .filter(Boolean);
